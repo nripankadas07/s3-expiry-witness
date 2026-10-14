@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "s3-expiry-witness"
+version = "0.1.0"
+description = "Evaluate explicit expiration-only rules for captured objects in a never-versioned bucket, explain excluded filters, calculate UTC eligibility and identify every earliest winning rule."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Nripanka Das"}]
+dependencies = []
+
+[project.scripts]
+s3-expiry-witness = "s3_expiry_witness:main"
+
+[tool.setuptools]
+py-modules = ["s3_expiry_witness"]
